@@ -186,6 +186,9 @@ export const ProfilePage = () => {
           {/* Right form */}
           <div className="profile-settings-card">
             <h3 className="settings-sec-title">Contact &amp; Shipping Preferences</h3>
+            <p className="settings-sec-desc">
+              Update your personal contact details and bespoke delivery address.
+            </p>
 
             <form onSubmit={handleSaveProfile} className="profile-form-grid">
               <div className="input-block">
