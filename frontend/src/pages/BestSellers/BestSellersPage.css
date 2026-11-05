@@ -1,0 +1,234 @@
+/* Best Sellers Page Styles */
+.bestsellers-page-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg, #09090b);
+  color: var(--color-text, #fafafa);
+}
+
+.bestsellers-hero-banner {
+  padding: 48px 0 36px;
+  background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.1), transparent 70%),
+              linear-gradient(180deg, rgba(22, 18, 12, 0.8) 0%, rgba(9, 9, 11, 0.95) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bestsellers-header-content {
+  margin-top: 18px;
+  max-width: 780px;
+}
+
+.bestsellers-main-title {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: clamp(1.75rem, 5.5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 14px 0 10px;
+  background: linear-gradient(135deg, #ffffff 30%, #fde68a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.bestsellers-main-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #a1a1aa;
+}
+
+.bestsellers-stage-section {
+  padding: 40px 0 80px;
+}
+
+.bestsellers-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bestsellers-tabs-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+
+.bestsellers-tabs-row::-webkit-scrollbar {
+  display: none;
+}
+
+.bestseller-page-tab {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a1a1aa;
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bestseller-page-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.bestseller-page-tab.active {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  border-color: #818cf8;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.bestsellers-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #a1a1aa;
+}
+
+.bestsellers-sort-wrap .select-wrapper {
+  position: relative;
+}
+
+.bestsellers-sort-wrap select {
+  appearance: none;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fafafa;
+  padding: 8px 34px 8px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.bestsellers-sort-wrap .select-chevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #71717a;
+}
+
+.bestsellers-results-badge {
+  margin: 20px 0 28px;
+  font-size: 0.9rem;
+  color: #71717a;
+}
+
+.bestsellers-results-badge strong {
+  color: #fafafa;
+}
+
+.bestsellers-page-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+.bestsellers-empty-notice {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  margin-bottom: 50px;
+}
+
+/* Editorial Praise Banner */
+.bestsellers-editorial-quote-card {
+  margin-top: 50px;
+  background: radial-gradient(circle at 15% 50%, rgba(245, 158, 11, 0.08), transparent 50%),
+              linear-gradient(135deg, rgba(24, 24, 32, 0.9) 0%, rgba(15, 15, 20, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-quote-halo {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f59e0b;
+}
+
+.editorial-quote-text {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #f4f4f5;
+  max-width: 820px;
+  margin: 0 auto 20px;
+}
+
+.editorial-author-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.editorial-author-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: #a1a1aa;
+}
+
+.editorial-stars {
+  display: flex;
+  gap: 3px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bestsellers-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bestsellers-main-title {
+    font-size: 2.1rem;
+  }
+  .bestsellers-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .editorial-quote-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bestsellers-page-grid {
+    grid-template-columns: 1fr;
+  }
+  .bestsellers-controls-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

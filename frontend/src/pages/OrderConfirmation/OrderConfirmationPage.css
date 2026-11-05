@@ -1,0 +1,216 @@
+.order-confirmation-root {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+}
+
+.order-confirmation-container {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  max-width: 860px;
+}
+
+.confirmation-card {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+  padding: 44px;
+  text-align: center;
+}
+
+.confirmation-hero-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+}
+
+.confirmation-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.confirmation-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+/* Reference Box */
+.confirmation-ref-box {
+  background: var(--bg-surface-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.ref-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ref-ord-id strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  display: block;
+}
+
+.ref-ord-id span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.ref-ord-total strong {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  display: block;
+  text-align: right;
+}
+
+.ref-ord-total span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: right;
+  display: block;
+}
+
+/* Stepper */
+.conf-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0;
+  position: relative;
+}
+
+.conf-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.conf-step-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.conf-step.active .conf-step-circle {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+}
+
+.conf-step span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.conf-step.active span {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.conf-line {
+  flex: 1;
+  height: 3px;
+  background: #e2e8f0;
+  margin: 0 8px;
+  margin-top: -24px;
+}
+
+.conf-line.active {
+  background: var(--gradient-primary);
+}
+
+/* Receipt items list */
+.conf-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+  border-top: 1px solid var(--border-light);
+  padding-top: 20px;
+}
+
+.conf-item-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.conf-item-thumb {
+  width: 52px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.conf-item-meta {
+  flex: 1;
+}
+
+.conf-item-meta strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.conf-item-meta span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.conf-item-total {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* Buttons */
+.confirmation-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .confirmation-card {
+    padding: 24px;
+  }
+  .confirmation-actions {
+    flex-direction: column;
+  }
+  .conf-step span {
+    font-size: 0.72rem;
+  }
+}
+

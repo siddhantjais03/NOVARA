@@ -1,0 +1,139 @@
+.bestsellers-section {
+  padding: 100px 0;
+  background-color: var(--bg-surface);
+  position: relative;
+}
+
+.bestsellers-filter-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+
+.bestsellers-tabs {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-surface-secondary);
+  padding: 5px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  gap: 4px;
+}
+
+.bestseller-tab-btn {
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.bestseller-tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.bestseller-tab-btn.active {
+  background: #ffffff;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+.bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Press Quote Card */
+.press-quote-box {
+  margin-top: 70px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.06) 100%);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  border-radius: var(--radius-xl);
+  padding: 44px 50px;
+  text-align: center;
+  position: relative;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-subtle);
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.quote-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+
+.quote-author-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.author-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-primary);
+}
+
+.author-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+@media (max-width: 1200px) {
+  .bestsellers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 868px) {
+  .bestsellers-section {
+    padding: 60px 0;
+  }
+  .bestsellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .press-quote-box {
+    padding: 30px 24px;
+    margin-top: 40px;
+  }
+  .quote-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .bestsellers-grid {
+    grid-template-columns: 1fr;
+  }
+  .bestsellers-tabs {
+    flex-wrap: wrap;
+    border-radius: var(--radius-md);
+    width: 100%;
+    justify-content: center;
+  }
+}
+

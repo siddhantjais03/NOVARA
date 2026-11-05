@@ -1,0 +1,333 @@
+/* Common Luxury Content Pages Styling (About, Contact, FAQ, Legal) */
+.content-page-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-luxury, #fbfbfd);
+}
+
+.content-page-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #312e81 100%);
+  color: #ffffff;
+  padding: 64px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-page-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 140%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.content-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c7d2fe;
+  margin-bottom: 16px;
+}
+
+.content-hero-title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: clamp(1.85rem, 4.5vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.content-hero-sub {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content-main-container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+  flex: 1;
+}
+
+/* About Page Specifics */
+.about-grid-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+@media (max-width: 860px) {
+  .about-grid-story {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-story-text h2 {
+  font-family: var(--font-display, serif);
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.about-story-text p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.about-story-image-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.about-story-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 72px;
+}
+
+@media (max-width: 768px) {
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pillar-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(99, 102, 241, 0.08);
+}
+
+.pillar-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #ede9fe;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.pillar-card h3 {
+  font-family: var(--font-display, serif);
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.pillar-card p {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Contact Page Specifics */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 40px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form-card h2 {
+  font-family: var(--font-display, serif);
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.contact-form-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.contact-info-card {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 12px 35px rgba(30, 27, 75, 0.25);
+}
+
+.contact-info-card h3 {
+  font-family: var(--font-display, serif);
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.contact-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact-detail-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c7d2fe;
+  flex-shrink: 0;
+}
+
+/* FAQ Specifics */
+.faq-accordion-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faq-item-card.open {
+  border-color: #a5b4fc;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.08);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.faq-answer-pane {
+  padding: 0 24px 22px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+
+/* Legal Documents Styling */
+.legal-document-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 48px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+}
+
+.legal-section-block {
+  margin-bottom: 36px;
+}
+
+.legal-section-block h2 {
+  font-family: var(--font-display, serif);
+  font-size: 1.4rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.legal-section-block p,
+.legal-section-block li {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.legal-section-block ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.legal-section-block li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 480px) {
+  .content-hero {
+    padding: 36px 16px 44px;
+  }
+  .content-hero-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+  .content-hero-sub {
+    font-size: 0.92rem;
+  }
+  .content-main-container {
+    padding: 32px 16px 60px;
+  }
+}
+
